@@ -132,5 +132,3 @@ int response = CreateWinAPI32PopupMSG("Error", "An error occurred. What would yo
 - This code is specific to Windows systems and uses the Windows API, so it won't work on other platforms.
 - The maximum length for the title and message content is 43 characters due to the limitations of the Windows API message box.
 - The `CreateWinAPI32PopupMSG` function uses ANSI encoding by default.
-```
-```
