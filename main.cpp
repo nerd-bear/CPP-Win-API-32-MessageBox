@@ -8,9 +8,9 @@
  * 
  * This function converts a standard C++ String to a WString usint a few clever tenicues
  * 
- * @param s is the string to be converted
+ * @param _string is the string to be converted
  * 
- * @param isUtf8 is true by default and defines weather the UTF8 is enabled
+ * @param _isUtf8Enabled is true by default and defines weather the UTF8 is enabled
  * 
  * @returns W String
  */
@@ -19,11 +19,11 @@ std::wstring StringToWString(const std::string &_string, bool _isUtf8Enabled = t
     int _len;
     int _StringLength = (int)_string.length() + 1;
     _len = MultiByteToWideChar(_isUtf8Enabled ? CP_UTF8 : CP_ACP, 0, _string.c_str(), _StringLength, 0, 0);
-    std::wstring buf;
-    buf.resize(_len);
+    std::wstring _buffer;
+    _buffer.resize(_len);
     MultiByteToWideChar(_isUtf8Enabled ? CP_UTF8 : CP_ACP, 0, _string.c_str(), _StringLength,
-           const_cast<wchar_t *>(buf.c_str()), _len);
-    return buf;
+           const_cast<wchar_t *>(_buffer.c_str()), _len);
+    return _buffer;
 }
 
 /**
@@ -31,7 +31,7 @@ std::wstring StringToWString(const std::string &_string, bool _isUtf8Enabled = t
  * 
  * This function converts a standard C++ String to a LPCWSTR String
  * 
- * @param str is the string to be converted
+ * @param _string is the string to be converted
  * 
  * @returns LPCWSTR String
  */
