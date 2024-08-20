@@ -1,6 +1,6 @@
-# Windows API Popup Message Utility
+# Windows API 32 Message Box Utility
 
-This C++ code provides utility functions for creating popup messages using the Windows API. The functions are specifically designed to convert standard C++ strings to wide strings and LPCWSTR, which are then used to display a popup message. This utility only works on Windows systems.
+This C++ code provides utility functions for creating message boxes using the Windows API. The functions are specifically designed to convert standard C++ strings to wide strings and LPCWSTR, which are then used to display a popup message. This utility only works on Windows systems.
 
 ## Table of Contents
 
